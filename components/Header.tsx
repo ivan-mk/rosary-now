@@ -1,46 +1,46 @@
 'use client';
-import { useState, useEffect } from 'react'
-import { getCurrentMystery } from '../utils/mysteryUtils'
-import { FaSun, FaMoon } from 'react-icons/fa'
-import { useLanguage } from '../context/LanguageContext'
-import LanguageSelector from './LanguageSelector'
+import { useState, useEffect } from 'react';
+import { getCurrentMystery } from '../utils/mysteryUtils';
+import { FaSun, FaMoon } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
+import LanguageSelector from './LanguageSelector';
 
 export default function Header() {
-  const [theme, setTheme] = useState('dark')
-  const [currentMystery, setCurrentMystery] = useState(getCurrentMystery())
-  const { language } = useLanguage()
+  const [theme, setTheme] = useState('dark');
+  const [currentMystery, setCurrentMystery] = useState(getCurrentMystery());
+  const { language } = useLanguage();
 
   useEffect(() => {
-    const currentTheme = localStorage.getItem('theme')
+    const currentTheme = localStorage.getItem('theme');
     if (currentTheme) {
-      setTheme(currentTheme)
-      document.documentElement.classList.toggle('dark', currentTheme === 'dark')
+      setTheme(currentTheme);
+      document.documentElement.classList.toggle('dark', currentTheme === 'dark');
     } else {
-      setThemeBasedOnTime()
+      setThemeBasedOnTime();
     }
 
     // Update mystery every minute
     const intervalId = setInterval(() => {
-      setCurrentMystery(getCurrentMystery())
-    }, 60000)
+      setCurrentMystery(getCurrentMystery());
+    }, 60000);
 
-    return () => clearInterval(intervalId)
-  }, [])
+    return () => clearInterval(intervalId);
+  }, []);
 
   const setThemeBasedOnTime = () => {
-    const currentHour = new Date().getHours()
-    const newTheme = (currentHour >= 6 && currentHour < 20) ? 'light' : 'dark'
-    setTheme(newTheme)
-    localStorage.setItem('theme', newTheme)
-    document.documentElement.classList.toggle('dark', newTheme === 'dark')
-  }
+    const currentHour = new Date().getHours();
+    const newTheme = (currentHour >= 6 && currentHour < 20) ? 'light' : 'dark';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+  };
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light'
-    setTheme(newTheme)
-    localStorage.setItem('theme', newTheme)
-    document.documentElement.classList.toggle('dark', newTheme === 'dark')
-  }
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+  };
 
   return (
     <header className="flex flex-col sm:flex-row items-center justify-between p-4">
@@ -75,5 +75,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

@@ -15,14 +15,14 @@ export default function RosaryPrayers({ isVisible, onToggle }: { isVisible: bool
   useEffect(() => {
     if (isVisible) {
       setTimeout(() => {
-        sectionRef.current?.scrollIntoView({ behavior: 'smooth' })
-      }, 100)
+        sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
     }
-  }, [isVisible])
+  }, [isVisible]);
 
   const handlePrayerChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedPrayer(event.target.value as keyof typeof prayers)
-  }
+    setSelectedPrayer(event.target.value as keyof typeof prayers);
+  };
 
   return (
     <section id="rosary-prayers" ref={sectionRef} className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md">
@@ -65,5 +65,5 @@ export default function RosaryPrayers({ isVisible, onToggle }: { isVisible: bool
         </div>
       </div>
     </section>
-  )
+  );
 }

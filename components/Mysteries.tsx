@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from 'react'
-import { loadRosaryData } from '../utils/loadRosaryData'
-import { getCurrentMystery } from '../utils/mysteryUtils'
+import { useState, useEffect, useRef } from 'react';
+import { loadRosaryData } from '../utils/loadRosaryData';
+import { getCurrentMystery } from '../utils/mysteryUtils';
 import { useLanguage } from '../context/LanguageContext';
 
 interface Mystery {
@@ -24,19 +24,19 @@ export default function Mysteries({ isVisible, onToggle }: { isVisible: boolean,
     const mysteryType = currentMysteryString.split(' - ')[1].toLowerCase().split(' ')[0] as keyof Mysteries;
     return mysteryType;
   });
-  const sectionRef = useRef<HTMLElement>(null)
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (isVisible) {
       setTimeout(() => {
-        sectionRef.current?.scrollIntoView({ behavior: 'smooth' })
-      }, 100)
+        sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
     }
-  }, [isVisible])
+  }, [isVisible]);
 
   const handleMysteryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedMystery(event.target.value as keyof Mysteries)
-  }
+    setSelectedMystery(event.target.value as keyof Mysteries);
+  };
 
   return (
     <section id="mysteries" ref={sectionRef} className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md">
@@ -92,5 +92,5 @@ export default function Mysteries({ isVisible, onToggle }: { isVisible: boolean,
         </div>
       </div>
     </section>
-  )
+  );
 }
