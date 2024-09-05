@@ -1,0 +1,446 @@
+{
+  "languages": ["en", "es", "fr"],
+  "translations": {
+    "en": {
+      "mysteries": {
+        "joyful": [
+          {
+            "title": "The Annunciation",
+            "details": ["Gospel of Luke 1:26-38"]
+          },
+          {
+            "title": "The Visitation",
+            "details": ["Gospel of Luke 1:39-56"]
+          },
+          {
+            "title": "The Nativity",
+            "details": ["Gospel of Luke 2:1-21"]
+          },
+          {
+            "title": "The Presentation in the Temple",
+            "details": ["Gospel of Luke 2:22-38"]
+          },
+          {
+            "title": "The Finding of Jesus in the Temple",
+            "details": ["Gospel of Luke 2:41-52"]
+          }
+        ],
+        "sorrowful": [
+          {
+            "title": "The Agony in the Garden",
+            "details": ["Gospel of Matthew 26:36-56"]
+          },
+          {
+            "title": "The Scourging at the Pillar",
+            "details": ["Gospel of Matthew 27:26"]
+          },
+          {
+            "title": "The Crowning with Thorns",
+            "details": ["Gospel of Matthew 27:27-31"]
+          },
+          {
+            "title": "The Carrying of the Cross",
+            "details": ["Gospel of Luke 23:26-32"]
+          },
+          {
+            "title": "The Crucifixion",
+            "details": ["Gospel of Luke 23:33-46"]
+          }
+        ],
+        "glorious": [
+          {
+            "title": "The Resurrection",
+            "details": ["Gospel of Matthew 28:1-10"]
+          },
+          {
+            "title": "The Ascension",
+            "details": ["Acts of the Apostles 1:6-11"]
+          },
+          {
+            "title": "The Descent of the Holy Spirit",
+            "details": ["Acts of the Apostles 2:1-13"]
+          },
+          {
+            "title": "The Assumption of Mary",
+            "details": ["Book of Revelation 12:1"]
+          },
+          {
+            "title": "The Coronation of Mary",
+            "details": ["Book of Revelation 12:1"]
+          }
+        ],
+        "luminous": [
+          {
+            "title": "The Baptism of Jesus in the Jordan",
+            "details": ["Gospel of Matthew 3:13-17"]
+          },
+          {
+            "title": "The Wedding Feast at Cana",
+            "details": ["Gospel of John 2:1-12"]
+          },
+          {
+            "title": "The Proclamation of the Kingdom of God",
+            "details": ["Gospel of Mark 1:14-15"]
+          },
+          {
+            "title": "The Transfiguration",
+            "details": ["Gospel of Matthew 17:1-8"]
+          },
+          {
+            "title": "The Institution of the Eucharist",
+            "details": ["Gospel of Matthew 26:26-28"]
+          }
+        ]
+      },
+      "prayers": {
+        "signOfTheCross": {
+          "title": "Sign of the Cross",
+          "text": "In the name of the Father,\nand of the Son,\nand of the Holy Spirit.\nAmen."
+        },
+        "apostlesCreed": {
+          "title": "Apostles' Creed",
+          "text": "I believe in God, the Father Almighty, Creator of Heaven and earth;\nand in Jesus Christ, His only Son, Our Lord,\nWho was conceived by the Holy Spirit, born of the Virgin Mary,\nsuffered under Pontius Pilate, was crucified, died, and was buried.\nHe descended into Hell; the third day He rose again from the dead;\nHe ascended into Heaven, and is seated at the right hand of God, the Father Almighty;\nfrom thence He shall come to judge the living and the dead.\nI believe in the Holy Spirit, the holy Catholic Church,\nthe communion of saints, the forgiveness of sins,\nthe resurrection of the body, and life everlasting.\nAmen."
+        },
+        "ourFather": {
+          "title": "Our Father",
+          "text": "Our Father, Who art in Heaven, hallowed be Thy name;\nThy Kingdom come, Thy will be done on earth as it is in Heaven.\nGive us this day our daily bread;\nand forgive us our trespasses as we forgive those who trespass against us;\nand lead us not into temptation, but deliver us from evil.\nAmen."
+        },
+        "hailMary": {
+          "title": "Hail Mary",
+          "text": "Hail Mary, full of grace, the Lord is with thee;\nblessed art thou among women,\nand blessed is the fruit of thy womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners,\nnow and at the hour of our death.\nAmen."
+        },
+        "gloryBe": {
+          "title": "Glory Be",
+          "text": "Glory be to the Father, and to the Son, and to the Holy Spirit.\nAs it was in the beginning, is now, and ever shall be, world without end.\nAmen."
+        },
+        "fatimaPrayer": {
+          "title": "Fatima Prayer",
+          "text": "O my Jesus, forgive us our sins,\nsave us from the fires of hell,\nlead all souls to Heaven,\nespecially those in most need of Thy mercy."
+        },
+        "hailHolyQueen": {
+          "title": "Hail Holy Queen",
+          "text": "Salut, o Reine, Mère de miséricorde, douceur de notre vie, notre espérance, salut! Enfants d'Ève, exilés, nous crions vers toi. Vers toi, nous soupirons gémissant et pleurant dans cette vallée de larmes. Toi, notre avocate, tourne vers nous ton regard miséricordieux. Et, après cet exil, montre-nous Jésus, le fruit béni de ton sein. O clémente, o miséricordieuse, o douce Vierge Marie!"
+        }
+      },
+      "instructions": {
+        "title": "Instructions",
+        "hide": "Hide",
+        "show": "Show",
+        "howToPrayTitle": "How to Pray the Rosary",
+        "howToPraySteps": [
+          "Begin with the Sign of the Cross",
+          "Recite the Apostles' Creed",
+          "Pray the Our Father",
+          "Pray three Hail Marys",
+          "Pray the Glory Be",
+          "Announce the First Mystery and pray the Our Father",
+          "Pray ten Hail Marys",
+          "Pray the Glory Be and the Fatima Prayer",
+          "Repeat steps 6-8 for the remaining Mysteries",
+          "Conclude with the Hail Holy Queen and the Final Prayer"
+        ],
+        "mysteriesTitle": "Mysteries of the Rosary",
+        "mysteries": [
+          "Joyful Mysteries (Monday & Saturday)",
+          "Sorrowful Mysteries (Tuesday & Friday)",
+          "Glorious Mysteries (Wednesday & Sunday)",
+          "Luminous Mysteries (Thursday)"
+        ]
+      }
+    },
+    "es": {
+      "mysteries": {
+        "joyful": [
+          {
+            "title": "La Anunciación",
+            "details": ["Evangelio según San Lucas 1:26-38"]
+          },
+          {
+            "title": "La Visita",
+            "details": ["Evangelio según San Lucas 1:39-56"]
+          },
+          {
+            "title": "El Nacimiento",
+            "details": ["Evangelio según San Lucas 2:1-21"]
+          },
+          {
+            "title": "La Presentación en el Templo",
+            "details": ["Evangelio según San Lucas 2:22-38"]
+          },
+          {
+            "title": "La Encontrada en el Templo",
+            "details": ["Evangelio según San Lucas 2:41-52"]
+          }
+        ],
+        "sorrowful": [
+          {
+            "title": "La Agonía en el Jardín",
+            "details": ["Evangelio según San Mateo 26:36-56"]
+          },
+          {
+            "title": "La Flagelación en el Pilar",
+            "details": ["Evangelio según San Mateo 27:26"]
+          },
+          {
+            "title": "La Coronación de Espinas",
+            "details": ["Evangelio según San Mateo 27:27-31"]
+          },
+          {
+            "title": "La Carga de la Cruz",
+            "details": ["Evangelio según San Lucas 23:26-32"]
+          },
+          {
+            "title": "La Crucifixión",
+            "details": ["Evangelio según San Lucas 23:33-46"]
+          }
+        ],
+        "glorious": [
+          {
+            "title": "La Resurrección",
+            "details": ["Evangelio según San Mateo 28:1-10"]
+          },
+          {
+            "title": "La Ascensión",
+            "details": ["Hechos de los Apóstoles 1:6-11"]
+          },
+          {
+            "title": "La Descendencia del Espíritu Santo",
+            "details": ["Hechos de los Apóstoles 2:1-13"]
+          },
+          {
+            "title": "La Asunción de María",
+            "details": ["Apocalipsis 12:1"]
+          },
+          {
+            "title": "La Coronación de María",
+            "details": ["Apocalipsis 12:1"]
+          }
+        ],
+        "luminous": [
+          {
+            "title": "El Bautismo de Jesús en el Jordán",
+            "details": ["Evangelio según San Mateo 3:13-17"]
+          },
+          {
+            "title": "La Fiesta de las Bodas de Caná",
+            "details": ["Evangelio según San Juan 2:1-12"]
+          },
+          {
+            "title": "La Proclamación del Reino de Dios",
+            "details": ["Evangelio según San Marcos 1:14-15"]
+          },
+          {
+            "title": "La Transfiguración",
+            "details": ["Evangelio según San Mateo 17:1-8"]
+          },
+          {
+            "title": "La Institución de la Eucaristía",
+            "details": ["Evangelio según San Mateo 26:26-28"]
+          }
+        ]
+      },
+      "prayers": {
+        "signOfTheCross": {
+          "title": "La Señal de la Cruz",
+          "text": "En el nombre del Padre,\ny del Hijo,\ny del Espíritu Santo.\nAmén."
+        },
+        "apostlesCreed": {
+          "title": "Credo de los Apóstoles",
+          "text": "Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra;\ny en Jesucristo, su único Hijo, nuestro Señor,\nque fue concebido por el poder del Espíritu Santo,\nnació de la Virgen María,\npadeció bajo el reinado de Pontio Pilato,\nfue crucificado, murió y fue sepultado.\nDescendió al infierno; el tercer día resucitó de entre los muertos;\nascendió a los cielos, y está sentado a la derecha de Dios, Padre todopoderoso;\nde allí vendrá a juzgar a los vivos y a los muertos.\nCreo en el Espíritu Santo, la santa Iglesia católica,\nla comunión de los santos, el perdón de los pecados,\nla resurrección de la carne y la vida eterna.\nAmén."
+        },
+        "ourFather": {
+          "title": "Padre Nuestro",
+          "text": "Padre nuestro que estás en los cielos,\nsantificado sea tu nombre;\nvenga a nosotros tu reino;\nhágase tu voluntad, en la tierra como en el cielo.\nDanos hoy nuestro pan de cada día;\nperdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden;\nno nos dejes caer en la tentación, y líbranos del mal.\nAmén."
+        },
+        "hailMary": {
+          "title": "Ave María",
+          "text": "Ave María, llena eres de gracia,\nel Señor es contigo;\nbendita tú eres entre todas las mujeres,\ny bendito es el fruto de tu vientre, Jesús.\nSanta María, Madre de Dios,\nroga por nosotros pecadores,\nahora y en la hora de nuestra muerte.\nAmén."
+        },
+        "gloryBe": {
+          "title": "Gloria sea",
+          "text": "Gloria sea al Padre, y al Hijo, y al Espíritu Santo.\nComo era en el principio, ahora y siempre, por los siglos de los siglos.\nAmén."
+        },
+        "fatimaPrayer": {
+          "title": "Oración de Fátima",
+          "text": "¡Oh, mi Jesús, perdona nuestros pecados,\nlíbranos de las llamas del infierno,\nconduce todas las almas al cielo,\nespecialmente a las más necesitadas de tu misericordia."
+        },
+        "hailHolyQueen": {
+          "title": "Salve, Reina",
+          "text": "Salve, Reina, Madre de misericordia,\nvida, dulzura y esperanza nuestra,\na ti clamamos, los desterrados hijos de Eva.\nA ti gritamos, gimiendo y llorando\nen este valle de lágrimas.\nVuelve, acogedora Madre,\nhaz resplandecer sobre nosotros\nla dulce luz de tu divino Hijo.\nVirgen santa, Madre de Dios,\nruega por nosotros, a ti confiados."
+        }
+      },
+      "instructions": {
+        "title": "Instrucciones",
+        "hide": "Ocultar",
+        "show": "Mostrar",
+        "howToPrayTitle": "Cómo rezar el Rosario",
+        "howToPraySteps": [
+          "Comienza con la Señal de la Cruz",
+          "Recita el Credo de los Apóstoles",
+          "Reza el Padre Nuestro",
+          "Reza tres Ave Marías",
+          "Reza el Gloria",
+          "Anuncia el Primer Misterio y reza el Padre Nuestro",
+          "Reza diez Ave Marías",
+          "Reza el Gloria y la Oración de Fátima",
+          "Repite los pasos 6-8 para los Misterios restantes",
+          "Concluye con la Salve Reina y la Oración Final"
+        ],
+        "mysteriesTitle": "Misterios del Rosario",
+        "mysteries": [
+          "Misterios Gozosos (Lunes y Sábado)",
+          "Misterios Dolorosos (Martes y Viernes)",
+          "Misterios Gloriosos (Miércoles y Domingo)",
+          "Misterios Luminosos (Jueves)"
+        ]
+      }
+    },
+    "fr": {
+      "mysteries": {
+        "joyful": [
+          {
+            "title": "L'Annonciation",
+            "details": ["Évangile selon Luc 1:26-38"]
+          },
+          {
+            "title": "La Visitation",
+            "details": ["Évangile selon Luc 1:39-56"]
+          },
+          {
+            "title": "La Nativité",
+            "details": ["Évangile selon Luc 2:1-21"]
+          },
+          {
+            "title": "La Présentation de Jésus au Temple",
+            "details": ["Évangile selon Luc 2:22-38"]
+          },
+          {
+            "title": "Le Recouvrement de Jésus au Temple",
+            "details": ["Évangile selon Luc 2:41-52"]
+          }
+        ],
+        "sorrowful": [
+          {
+            "title": "L'Agonie de Jésus",
+            "details": ["Évangile selon Matthieu 26:36-56"]
+          },
+          {
+            "title": "La Flagellation",
+            "details": ["Évangile selon Matthieu 27:26"]
+          },
+          {
+            "title": "Le Couronnement d'Épines",
+            "details": ["Évangile selon Matthieu 27:27-31"]
+          },
+          {
+            "title": "Le Portement de Croix",
+            "details": ["Évangile selon Luc 23:26-32"]
+          },
+          {
+            "title": "La Crucifixion",
+            "details": ["Évangile selon Luc 23:33-46"]
+          }
+        ],
+        "glorious": [
+          {
+            "title": "La Résurrection",
+            "details": ["Évangile selon Matthieu 28:1-10"]
+          },
+          {
+            "title": "L'Ascension",
+            "details": ["Actes des Apôtres 1:6-11"]
+          },
+          {
+            "title": "La Pentecôte",
+            "details": ["Actes des Apôtres 2:1-13"]
+          },
+          {
+            "title": "L'Assomption",
+            "details": ["Apocalypse 12:1"]
+          },
+          {
+            "title": "Le Couronnement de Marie",
+            "details": ["Apocalypse 12:1"]
+          }
+        ],
+        "luminous": [
+          {
+            "title": "Le Baptême de Jésus",
+            "details": ["Évangile selon Matthieu 3:13-17"]
+          },
+          {
+            "title": "Les Noces de Cana",
+            "details": ["Évangile selon Jean 2:1-12"]
+          },
+          {
+            "title": "L'Annonce du Royaume",
+            "details": ["Évangile selon Marc 1:14-15"]
+          },
+          {
+            "title": "La Transfiguration",
+            "details": ["Évangile selon Matthieu 17:1-8"]
+          },
+          {
+            "title": "L'Institution de l'Eucharistie",
+            "details": ["Évangile selon Matthieu 26:26-28"]
+          }
+        ]
+      },
+      "prayers": {
+        "signOfTheCross": {
+          "title": "Le Signe de Croix",
+          "text": "Au nom du Père,\net du Fils,\net du Saint-Esprit.\nAmen."
+        },
+        "apostlesCreed": {
+          "title": "Symbole des Apôtres",
+          "text": "Je crois en Dieu, le Père tout-puissant, Créateur du ciel et de la terre,\net en Jésus Christ, son Fils unique, notre Seigneur,\nqui a été conçu du Saint Esprit, est né de la Vierge Marie,\na souffert sous Ponce Pilate, a été crucifié, est mort et a été enseveli, est descendu aux enfers,\nle troisième jour est ressuscité des morts, est monté aux cieux, est assis à la droite de Dieu, le\nPère tout-puissant, d'où il viendra juger les vivants et les morts.\nJe crois en l'Esprit Saint, à la sainte Église universelle, à la communion des saints, à la rémission\ndes péchés, à la résurrection de la chair, à la vie éternelle.\nAmen"
+        },
+        "ourFather": {
+          "title": "Notre Père",
+          "text": "Notre Père, qui es aux cieux, que ton nom soit sanctifié, que ton règne vienne, que ta volonté soit faite sur la terre comme au ciel. Donne-nous aujourd'hui notre pain de ce jour, pardonne-nous nos offenses, comme nous pardonnons aussi à ceux qui nous ont offensés, et ne nous laisse pas entrer en tentation, mais délivre-nous du mal. Amen"
+        },
+        "hailMary": {
+          "title": "Je vous salue Marie",
+          "text": "Je vous salue, Marie, pleine de grâces, le Seigneur est avec vous, vous êtes bénie entre toutes les femmes, et Jésus, le fruit de vos entrailles, est béni. Sainte Marie, Mère de Dieu, priez pour nous, pauvres pécheurs, maintenant, et à l'heure de notre mort. Amen"
+        },
+        "gloryBe": {
+          "title": "Gloire au Père",
+          "text": "Gloire au Père, et au Fils, et au Saint-Esprit.\nComme il était au commencement, maintenant et toujours,\nEt dans les siècles des siècles.\nAmen."
+        },
+        "fatimaPrayer": {
+          "title": "Prière de Fatima",
+          "text": "Ô mon Jésus, pardonnez-nous nos péchés, préservez-nous du feu de l'enfer, et conduisez au Ciel toutes les âmes, surtout celles qui ont le plus besoin de Votre Miséricorde."
+        },
+        "hailHolyQueen": {
+          "title": "Salut, ô Reine",
+          "text": "Salut, o Reine, Mère de miséricorde, douceur de notre vie, notre espérance, salut! Enfants d'Ève, exilés, nous crions vers toi. Vers toi, nous soupirons gémissant et pleurant dans cette vallée de larmes. Toi, notre avocate, tourne vers nous ton regard miséricordieux. Et, après cet exil, montre-nous Jésus, le fruit béni de ton sein. O clémente, o miséricordieuse, o douce Vierge Marie!"
+        }
+      },
+      "instructions": {
+        "title": "Instructions",
+        "hide": "Cacher",
+        "show": "Afficher",
+        "howToPrayTitle": "Comment prier le Rosaire",
+        "howToPraySteps": [
+          "Commencez par le Signe de la Croix",
+          "Récitez le Symbole des Apôtres",
+          "Priez le Notre Père",
+          "Priez trois Je vous salue Marie",
+          "Priez le Gloire au Père",
+          "Annoncez le Premier Mystère et priez le Notre Père",
+          "Priez dix Je vous salue Marie",
+          "Priez le Gloire au Père et la Prière de Fátima",
+          "Répétez les étapes 6-8 pour les Mystères restants",
+          "Concluez avec le Salut, ô Reine et la Prière Finale"
+        ],
+        "mysteriesTitle": "Mystères du Rosaire",
+        "mysteries": [
+          "Mystères Joyeux (Lundi et Samedi)",
+          "Mystères Douloureux (Mardi et Vendredi)",
+          "Mystères Glorieux (Mercredi et Dimanche)",
+          "Mystères Lumineux (Jeudi)"
+        ]
+      }
+    }
+  }
+}
