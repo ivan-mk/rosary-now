@@ -12,12 +12,12 @@ export default function Home() {
   const [visibleSection, setVisibleSection] = useState<string | null>(null)
 
   useEffect(() => {
-    const currentTheme = localStorage.getItem('theme');
+    const currentTheme = localStorage.getItem('theme')
     if (currentTheme) {
-      setTheme(currentTheme);
-      document.documentElement.classList.toggle('dark', currentTheme === 'dark');
+      setTheme(currentTheme)
+      document.documentElement.classList.toggle('dark', currentTheme === 'dark')
     } else {
-      setThemeBasedOnTime();
+      setThemeBasedOnTime()
     }
   }, [])
 

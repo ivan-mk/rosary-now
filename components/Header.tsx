@@ -11,27 +11,29 @@ export default function Header() {
   const { language } = useLanguage()
 
   useEffect(() => {
-    const updateMystery = () => {
-      setCurrentMystery(getCurrentMystery())
+    const currentTheme = localStorage.getItem('theme')
+    if (currentTheme) {
+      setTheme(currentTheme)
+      document.documentElement.classList.toggle('dark', currentTheme === 'dark')
+    } else {
+      setThemeBasedOnTime()
     }
-    
-    updateMystery()
 
-    // Calculate time until next day
-    const now = new Date()
-    const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1)
-    const timeUntilMidnight = tomorrow.getTime() - now.getTime()
+    // Update mystery every minute
+    const intervalId = setInterval(() => {
+      setCurrentMystery(getCurrentMystery())
+    }, 60000)
 
-    // Set timeout for next day's update
-    const timeoutId = setTimeout(() => {
-      updateMystery()
-      // Set interval for subsequent daily updates
-      const intervalId = setInterval(updateMystery, 24 * 60 * 60 * 1000)
-      return () => clearInterval(intervalId)
-    }, timeUntilMidnight)
-
-    return () => clearTimeout(timeoutId)
+    return () => clearInterval(intervalId)
   }, [])
+
+  const setThemeBasedOnTime = () => {
+    const currentHour = new Date().getHours()
+    const newTheme = (currentHour >= 6 && currentHour < 20) ? 'light' : 'dark'
+    setTheme(newTheme)
+    localStorage.setItem('theme', newTheme)
+    document.documentElement.classList.toggle('dark', newTheme === 'dark')
+  }
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light'

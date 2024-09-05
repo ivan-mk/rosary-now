@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -8,42 +8,10 @@ export default function Timer() {
   const [isTiming, setIsTiming] = useState<boolean | null>(null);
   const [startTime, setStartTime] = useState<number | null>(null);
   const [isMounted, setIsMounted] = useState(false);
-  const cookieUpdateTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  const updateCookies = useCallback(() => {
-    const cookieData = JSON.stringify({
-      timer: timer,
-      isTiming: isTiming,
-      startTime: startTime,
-    });
-    Cookies.set('rosaryData', cookieData, { expires: 1 });
-  }, [timer, isTiming, startTime]);
-
-  const debouncedUpdateCookies = useCallback(() => {
-    if (cookieUpdateTimeoutRef.current) {
-      clearTimeout(cookieUpdateTimeoutRef.current);
-    }
-    cookieUpdateTimeoutRef.current = setTimeout(updateCookies, 1000);
-  }, [updateCookies]);
-
-  const loadSavedState = useCallback(() => {
-    const savedData = Cookies.get('rosaryData');
-    if (savedData) {
-      const { timer: savedTimer, isTiming: savedIsTiming, startTime: savedStartTime } = JSON.parse(savedData);
-      setTimer(savedTimer ?? 0);
-      setIsTiming(savedIsTiming ?? false);
-      setStartTime(savedStartTime ?? null);
-    } else {
-      setTimer(0);
-      setIsTiming(false);
-      setStartTime(null);
-    }
-  }, []);
 
   useEffect(() => {
     setIsMounted(true);
-    loadSavedState();
-  }, [loadSavedState]);
+  }, []);
 
   useEffect(() => {
     let intervalId: NodeJS.Timeout | undefined;
@@ -65,26 +33,39 @@ export default function Timer() {
     };
   }, [isTiming, startTime]);
 
-  const startTimer = useCallback(() => {
-    const now = Date.now();
-    const newStartTime = now - (timer ?? 0) * 1000;
-    setStartTime(newStartTime);
-    setIsTiming(true);
-    setTimer((prevTimer) => prevTimer ?? 0); // Ensure timer is initialized
-    debouncedUpdateCookies();
-  }, [timer, debouncedUpdateCookies]);
+  useEffect(() => {
+    if (isMounted) {
+      const savedTimer = Cookies.get('rosaryTimer');
+      const savedIsTiming = Cookies.get('rosaryIsTiming');
+      const savedStartTime = Cookies.get('rosaryStartTime');
 
-  const stopTimer = useCallback(() => {
+      setTimer(savedTimer ? parseInt(savedTimer, 10) : 0);
+      setIsTiming(savedIsTiming === 'true');
+      setStartTime(savedStartTime ? parseInt(savedStartTime, 10) : null);
+    }
+  }, [isMounted]);
+
+  const startTimer = () => {
+    const now = Date.now();
+    setStartTime(now - (timer ?? 0) * 1000);
+    setIsTiming(true);
+    Cookies.set('rosaryIsTiming', 'true', { expires: 1 });
+    Cookies.set('rosaryStartTime', (now - (timer ?? 0) * 1000).toString(), { expires: 1 });
+  };
+
+  const stopTimer = () => {
     setIsTiming(false);
     Cookies.set('rosaryIsTiming', 'false', { expires: 1 });
-  }, []);
+  };
 
-  const resetTimer = useCallback(() => {
+  const resetTimer = () => {
     setIsTiming(false);
     setTimer(0);
     setStartTime(null);
-    ['rosaryTimer', 'rosaryIsTiming', 'rosaryStartTime'].forEach(name => Cookies.remove(name));
-  }, []);
+    Cookies.remove('rosaryTimer');
+    Cookies.remove('rosaryIsTiming');
+    Cookies.remove('rosaryStartTime');
+  };
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -117,8 +98,6 @@ export default function Timer() {
     return null; // or a loading placeholder
   }
 
-  const { rosaryPrayerTimer, startPrayer, stopPrayer, resetTimer: resetTimerText } = translations[language];
-
   return (
     <section id="timer" className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md flex flex-col items-center">
       <h2 className={`text-xl sm:text-2xl font-bold mb-4 p-2 rounded ${
@@ -128,28 +107,13 @@ export default function Timer() {
             ? 'bg-green-200 dark:bg-green-700' 
             : 'bg-red-200 dark:bg-red-700'
       }`}>
-        {rosaryPrayerTimer}: {formatTime(timer ?? 0)}
+        {translations[language].rosaryPrayerTimer}: {formatTime(timer ?? 0)}
       </h2>
       <div className="flex flex-wrap justify-center gap-2">
-        <TimerButton onClick={startTimer} color="green" text={startPrayer} />
-        <TimerButton onClick={stopTimer} color="red" text={stopPrayer} />
-        <TimerButton onClick={resetTimer} color="gray" text={resetTimerText} />
+        <button onClick={startTimer} className="bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 rounded transition duration-300">{translations[language].startPrayer}</button>
+        <button onClick={stopTimer} className="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 rounded transition duration-300">{translations[language].stopPrayer}</button>
+        <button onClick={resetTimer} className="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 rounded transition duration-300">{translations[language].resetTimer}</button>
       </div>
     </section>
   );
 }
-
-interface TimerButtonProps {
-  onClick: () => void;
-  color: 'green' | 'red' | 'gray';
-  text: string;
-}
-
-const TimerButton: React.FC<TimerButtonProps> = ({ onClick, color, text }) => (
-  <button
-    onClick={onClick}
-    className={`bg-${color}-500 hover:bg-${color}-400 text-white font-bold py-2 px-4 rounded transition duration-300`}
-  >
-    {text}
-  </button>
-);
